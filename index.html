@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tony Barbier — Développement commercial : comprendre, construire, exécuter</title>
+<meta name="description" content="Vous cherchez peut-être un commercial. Après 25 ans de vente et de développement commercial, ce que j'apporte va bien au-delà : comprendre vite votre business, trouver ce qui bloque le développement commercial, et le débloquer moi-même. Bordeaux ou à distance.">
+<meta property="og:title" content="Tony Barbier — comprendre, construire, exécuter">
+<meta property="og:description" content="25 ans d'expérience commerciale et entrepreneuriale, une vraie culture des nouveaux outils. Poste ou mission, Bordeaux ou à distance.">
+<meta property="og:image" content="portrait-sourire.jpg">
+<style>
+:root{--navy:#1B2F4F;--ink:#0F1F38;--blue:#2E6BA8;--sky:#e8f0fa;--paper:#F4F8FC;--line:#C7D4E5;--text:#1d2433;--muted:#5F6B7A;--accent:#E2A93B;--accent2:#c98f22}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:-apple-system,"Helvetica Neue",Segoe UI,Arial,sans-serif;color:var(--text);background:#fff;line-height:1.55;-webkit-font-smoothing:antialiased}
+a{color:var(--blue)}
+img{max-width:100%}
+.wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+/* header */
+.nav{position:sticky;top:0;z-index:50;background:rgba(27,47,79,.94);backdrop-filter:blur(8px);color:#fff}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+.brand{font-family:Georgia,serif;font-size:20px;color:#fff;text-decoration:none}
+.brand b{font-weight:700}
+.nav ul{list-style:none;display:flex;gap:22px;margin:0;padding:0}
+.nav ul a{color:#dbe6f5;text-decoration:none;font-size:15px}
+.nav ul a:hover{color:#fff}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 20px;border-radius:10px;text-decoration:none;font-weight:700;font-size:15px;border:0;cursor:pointer;transition:transform .15s,box-shadow .15s,background .15s}
+.btn:hover{transform:translateY(-1px)}
+.btn.primary{background:var(--accent);color:#1b1b1b;box-shadow:0 8px 24px rgba(226,169,59,.35)}
+.btn.primary:hover{background:var(--accent2)}
+.btn.ghost{border:1.5px solid #9fb6d8;color:#fff;background:transparent}
+.btn.dark{background:var(--navy);color:#fff}
+.btn.sm{padding:9px 14px;font-size:14px}
+/* hero */
+.hero{background:radial-gradient(1200px 600px at 80% -10%,#2a4a7a 0%,var(--navy) 55%);color:#fff;padding:64px 0 56px;overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:44px;align-items:center}
+.kicker{display:inline-block;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);padding:6px 12px;border-radius:999px;font-size:13px;letter-spacing:.04em;text-transform:uppercase;color:#dbe6f5;margin-bottom:16px}
+.hero h1{font-family:Georgia,"Times New Roman",serif;font-weight:400;font-size:clamp(30px,4.6vw,48px);line-height:1.12;margin:0 0 14px}
+.hero h1 em{font-style:normal;color:var(--accent)}
+.hero p.lead{font-size:19px;color:#e9eef7;margin:0 0 26px;max-width:600px}
+.hero .btns{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:14px}
+.hero .micro{font-size:13px;color:#b9c8dd}
+.portrait{position:relative;justify-self:end;width:100%;max-width:380px}
+.portrait img{width:100%;border-radius:18px;box-shadow:0 30px 60px rgba(0,0,0,.4);display:block}
+.portrait .badge{position:absolute;left:-14px;bottom:22px;background:#fff;color:var(--ink);padding:10px 14px;border-radius:12px;box-shadow:0 10px 30px rgba(0,0,0,.25);font-size:14px;font-weight:700}
+.portrait .badge span{display:block;font-weight:400;color:var(--muted);font-size:12px}
+/* proof bar */
+.proof{background:var(--ink);color:#cfd9ea;padding:14px 0;font-size:14px}
+.proof .wrap{display:flex;flex-wrap:wrap;gap:8px 28px;justify-content:center;align-items:center}
+.proof b{color:#fff}
+/* sections */
+section{padding:64px 0}
+section.alt{background:var(--paper);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+h2{font-family:Georgia,serif;font-weight:400;font-size:clamp(26px,3.4vw,34px);color:var(--ink);margin:0 0 8px;line-height:1.2}
+.sub{color:var(--muted);margin:0 0 30px;font-size:17px;max-width:720px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:22px;box-shadow:0 2px 0 rgba(27,47,79,.03)}
+.card h3{margin:0 0 8px;color:var(--navy);font-size:18px}
+.card p{margin:0;color:#3a4556}
+.card .n{display:inline-flex;width:34px;height:34px;border-radius:50%;background:var(--sky);color:var(--navy);align-items:center;justify-content:center;font-weight:700;margin-bottom:12px}
+.pain .card{border-left:4px solid var(--accent)}
+.video{background:#fff;border:1px solid var(--line);border-radius:16px;padding:14px;box-shadow:0 20px 50px rgba(27,47,79,.08)}
+.video .frame{position:relative;padding-top:56.25%;background:var(--ink);border-radius:12px;overflow:hidden}
+.video iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.video .placeholder{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;color:#cfd9ea;gap:10px}
+.video .placeholder .play{width:70px;height:70px;border-radius:50%;background:var(--accent);display:flex;align-items:center;justify-content:center;color:#1b1b1b;font-size:26px}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;counter-reset:s}
+.step{background:var(--navy);color:#fff;border-radius:14px;padding:24px}
+.step h3{margin:0 0 8px;font-size:20px;color:var(--accent)}
+.step p{margin:0;color:#dbe6f5}
+.timeline{list-style:none;padding:0;margin:0;border-left:3px solid var(--line)}
+.timeline li{padding:0 0 22px 22px;position:relative}
+.timeline li::before{content:"";position:absolute;left:-9px;top:6px;width:13px;height:13px;border-radius:50%;background:var(--blue)}
+.timeline .when{font-style:italic;color:var(--muted);font-size:14px}
+.timeline .what{font-weight:700;color:var(--ink)}
+.timeline .who{color:var(--blue);font-weight:600}
+.timeline p{margin:4px 0 0;color:#3a4556}
+.tags .tag{display:inline-block;background:#fff;border:1px solid var(--line);color:var(--navy);padding:8px 14px;border-radius:999px;margin:4px 6px 4px 0;font-size:14px}
+details{background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin-bottom:10px}
+summary{cursor:pointer;font-weight:700;color:var(--ink)}
+details p{margin:10px 0 0;color:#3a4556}
+.cta{background:radial-gradient(900px 400px at 20% 0%,#2a4a7a 0%,var(--navy) 60%);color:#fff;text-align:center;padding:70px 0}
+.cta h2{color:#fff}
+.cta p{color:#dbe6f5;font-size:18px;max-width:640px;margin:0 auto 26px}
+.cta .btns{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+footer{background:var(--ink);color:#aab8cc;padding:28px 0;font-size:14px}
+footer a{color:#fff;text-decoration:none}
+footer .wrap{display:flex;flex-wrap:wrap;gap:10px 24px;justify-content:space-between}
+/* sticky mobile CTA */
+.sticky{position:fixed;left:0;right:0;bottom:0;z-index:60;display:none;gap:10px;padding:10px 12px;background:rgba(15,31,56,.96);backdrop-filter:blur(8px)}
+.sticky .btn{flex:1;justify-content:center;padding:12px}
+/* reveal */
+.reveal{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s ease}
+.reveal.in{opacity:1;transform:none}
+@media (max-width:860px){
+  .hero .wrap{grid-template-columns:1fr}
+  .portrait{justify-self:start;max-width:260px;order:-1}
+  .grid3,.steps{grid-template-columns:1fr}
+  .grid2{grid-template-columns:1fr}
+  .nav ul{display:none}
+  .sticky{display:flex}
+  body{padding-bottom:64px}
+  section{padding:48px 0}
+}
+@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="wrap">
+    <a class="brand" href="#top"><b>Tony</b> Barbier</a>
+    <ul>
+      <li><a href="#video">Vidéo</a></li>
+      <li><a href="#offre">Ce que je fais</a></li>
+      <li><a href="#methode">Méthode</a></li>
+      <li><a href="#parcours">Parcours</a></li>
+    </ul>
+    <a class="btn primary sm" href="#contact">Échanger 15 minutes</a>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <div>
+      <span class="kicker">Développement commercial · Bordeaux ou à distance</span>
+      <h1>Vous cherchez peut-être un commercial. <em>Après vingt-cinq ans de vente et de développement commercial, ce que j'apporte va bien au-delà.</em></h1>
+      <p class="lead">Comprendre vite votre business, trouver ce qui bloque son développement commercial, et le débloquer moi-même. 25 ans d'expérience commerciale et entrepreneuriale, et une vraie culture des nouveaux outils.</p>
+      <div class="btns">
+        <a class="btn primary" href="#contact">Échanger 15 minutes</a>
+        <a class="btn ghost" href="#video">Voir la vidéo (1 min 30)</a>
+      </div>
+      <div class="micro">Réponse sous 24 h · disponible tout de suite · poste ou mission</div>
+    </div>
+    <div class="portrait">
+      <img src="portrait-sourire.jpg" alt="Tony Barbier">
+      <div class="badge">Tony Barbier<span>Bordeaux · 25 ans de terrain</span></div>
+    </div>
+  </div>
+</header>
+
+<div class="proof">
+  <div class="wrap">
+    <div><b>25 ans</b> de terrain</div>
+    <div><b>Immobilier</b> · compréhension fine des marchés</div>
+    <div><b>IA & SaaS</b> · virage anticipé il y a 3 ans</div>
+    <div><b>Entrepreneur</b> dans l'âme · je prends les initiatives</div>
+    <div><b>Réseaux</b> de partenaires animés</div>
+  </div>
+</div>
+
+<section id="video">
+  <div class="wrap reveal">
+    <h2>Une minute trente pour me présenter</h2>
+    <p class="sub">Qui je suis, ce que je sais faire, et pourquoi on devrait se parler. Plutôt qu'un CV de deux pages.</p>
+    <div class="video">
+      <div class="frame">
+        <!-- Remplacer par l'iframe Loom / YouTube après tournage -->
+        <div class="placeholder"><div class="play">▶</div><div>Vidéo de présentation (en cours de tournage)</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="alt pain" id="douleurs">
+  <div class="wrap reveal">
+    <h2>Vous vous reconnaissez ?</h2>
+    <p class="sub">Trois situations que je rencontre chez presque tous les dirigeants que je croise.</p>
+    <div class="grid3">
+      <div class="card"><h3>Le pipeline stagne</h3><p>Des rendez-vous, des démos, des prospects intéressés. Et à la fin du mois, les signatures ne sont pas là. Personne n'aide vos clients à décider.</p></div>
+      <div class="card"><h3>L'offre n'est pas claire</h3><p>Le produit est bon, mais le discours change selon qui le présente. Les objections reviennent toujours au même endroit, et personne ne les traite à la racine.</p></div>
+      <div class="card"><h3>Vous faites tout vous-même</h3><p>La stratégie, l'offre, les démos, le suivi. Vous avez besoin de quelqu'un qui pense avec vous, puis qui exécute sans qu'on lui tienne la main.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="offre">
+  <div class="wrap reveal">
+    <h2>Ce que je peux faire pour vous</h2>
+    <p class="sub">Pas seulement des recommandations. J'aime comprendre, construire et exécuter.</p>
+    <div class="grid3">
+      <div class="card"><div class="n">1</div><h3>Auditer votre organisation commerciale</h3><p>Ce qui marche, ce qui bloque, ce qui coûte. Un diagnostic net, sans rapport de cinquante pages.</p></div>
+      <div class="card"><div class="n">2</div><h3>Identifier les points de friction</h3><p>Là où vos prospects hésitent, là où vos partenaires ne produisent plus, là où le cycle s'allonge.</p></div>
+      <div class="card"><div class="n">3</div><h3>Structurer l'offre</h3><p>Un discours qui tient face aux objections réelles, construit avec vos équipes produit et technique.</p></div>
+      <div class="card"><div class="n">4</div><h3>Développer l'acquisition</h3><p>Partenariats, prescripteurs, canaux digitaux et IA pour générer un flux de demandes entrantes qualifiées, puis les convertir.</p></div>
+      <div class="card"><div class="n">5</div><h3>Améliorer la conversion</h3><p>Des démos qui deviennent des contrats. Écoute, traitement des freins un par un, conclusion sans forcer.</p></div>
+      <div class="card"><div class="n">6</div><h3>Gérer et développer un portefeuille</h3><p>Animer, consolider et faire grandir vos comptes existants et votre réseau de partenaires. Rétention, satisfaction, chiffre : les trois en même temps.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="alt" id="methode">
+  <div class="wrap reveal">
+    <h2>Comment je travaille</h2>
+    <p class="sub">Prendre de la hauteur, tout en restant profondément opérationnel.</p>
+    <div class="steps">
+      <div class="step"><h3>1 · Comprendre</h3><p>Votre marché, vos clients, votre offre, vos chiffres. Je pose des questions, j'écoute, je regarde ce qui se passe vraiment sur le terrain.</p></div>
+      <div class="step"><h3>2 · Construire</h3><p>La bonne réponse au bon endroit : une offre, un discours, un canal, un process. Avec vos équipes, pas à côté.</p></div>
+      <div class="step"><h3>3 · Exécuter</h3><p>Je prends les rendez-vous entrants, je fais les démos en visio, je signe, je fais produire le réseau. Les résultats se mesurent, pas les intentions.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="parcours">
+  <div class="wrap reveal grid2">
+    <div>
+      <h2>Parcours</h2>
+      <p class="sub">Vingt-cinq ans au contact des clients, des équipes et des dirigeants.</p>
+      <ul class="timeline">
+        <li><div class="when">2025 – 2026</div><div class="what">Directeur du développement — produit, marketing & commercial</div><div class="who">KERIA · SaaS immobilier par IA</div><p>Offre et argumentaire construits avec l'équipe technique ; vendu aux agences, réseaux de mandataires et promoteurs.</p></li>
+        <li><div class="when">2022 – 2023</div><div class="what">Responsable développement commercial national</div><div class="who">GRIDKY · SaaS pour l'immobilier neuf</div><p>Création de la fonction commerciale, vente de la solution aux agences et promoteurs.</p></li>
+        <li><div class="when">2008 – 2023</div><div class="what">Fondateur & dirigeant</div><div class="who">PREMIUM & PRESTIGE · commercialisation d'immobilier neuf</div><p>Partenariats promoteurs, réseau d'apporteurs animé, accompagnement des clients sur des décisions importantes.</p></li>
+        <li><div class="when">2001 – 2010</div><div class="what">Conseiller puis directeur commercial</div><div class="who">SCF PATRIMOINE · Paris</div><p>Conseil en investissement immobilier auprès de particuliers.</p></li>
+      </ul>
+    </div>
+    <div>
+      <h2>Formats & terrains de jeu</h2>
+      <p class="sub">Un poste ou une mission. Sur place à Bordeaux, ou à distance partout en France.</p>
+      <div class="tags">
+        <span class="tag">Développement commercial</span><span class="tag">Key account · gestion et développement de portefeuille</span><span class="tag">Customer success</span><span class="tag">Closing sur lead entrant</span><span class="tag">Stratégie commerciale & marketing</span><span class="tag">Structuration d'offre</span><span class="tag">Partenariats & prescripteurs</span><span class="tag">SaaS B2B</span><span class="tag">IA appliquée aux PME</span><span class="tag">Immobilier & PropTech</span>
+      </div>
+      <h2 style="margin-top:34px">Questions fréquentes</h2>
+      <details><summary>Poste salarié ou mission ?</summary><p>Ouvert à toute proposition. Un poste si le projet le mérite, une mission si vous préférez commencer comme ça : ce qui compte, c'est le résultat, pas le contrat.</p></details>
+      <details><summary>Vous êtes disponible quand ?</summary><p>Tout de suite. Un premier échange de 15 minutes cette semaine, un démarrage dans la foulée.</p></details>
+      <details><summary>Bordeaux uniquement ?</summary><p>Sur place à Bordeaux et en Nouvelle-Aquitaine, à distance partout en France. Les démos, le closing et le suivi se font très bien en visio depuis trois ans.</p></details>
+      <details><summary>Et l'IA, concrètement ?</summary><p>Je l'utilise tous les jours : préparation de rendez-vous, qualification, relances, synthèses, agents. Et j'ai vendu pendant trois ans un logiciel qui en est fait.</p></details>
+      <details><summary>Prospection à froid ?</summary><p>Non. Mon terrain, c'est le lead entrant, chaud ou qualifié : particuliers ou professionnels, en visio ou par téléphone, jusqu'à la signature. Générer le flux, oui, par les partenariats, les prescripteurs et les canaux digitaux. Taper dans le dur, ce n'est plus mon rôle.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="cta" id="contact">
+  <div class="wrap reveal">
+    <h2>Quinze minutes suffisent</h2>
+    <p>Si vous cherchez quelqu'un capable de prendre de la hauteur tout en restant profondément opérationnel, on se parle cette semaine.</p>
+    <div class="btns">
+      <a class="btn primary" href="https://wa.me/33609701141?text=Bonjour%20Tony%2C%20je%20souhaite%20%C3%A9changer%2015%20minutes." target="_blank" rel="noopener">WhatsApp · 06 09 70 11 41</a>
+      <a class="btn ghost" href="mailto:barbiertony@gmail.com?subject=15%20minutes%20avec%20Tony%20Barbier&body=Bonjour%20Tony%2C%0A%0AJe%20souhaite%20%C3%A9changer%2015%20minutes.%20Mes%20disponibilit%C3%A9s%20%3A%20">Écrire un e-mail</a>
+      <a class="btn ghost" href="https://www.linkedin.com/in/tonybarbier-bordeaux" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="btn ghost" href="CV-Tony-Barbier.pdf" target="_blank">CV (PDF)</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div><strong style="color:#fff">Tony Barbier</strong> · Bordeaux · <a href="tel:+33609701141">06 09 70 11 41</a> · <a href="mailto:barbiertony@gmail.com">barbiertony@gmail.com</a></div>
+    <div><a href="https://www.linkedin.com/in/tonybarbier-bordeaux" target="_blank" rel="noopener">LinkedIn</a> · <a href="CV-Tony-Barbier.pdf" target="_blank">CV</a></div>
+  </div>
+</footer>
+
+<div class="sticky">
+  <a class="btn primary" href="https://wa.me/33609701141?text=Bonjour%20Tony%2C%20je%20souhaite%20%C3%A9changer%2015%20minutes." target="_blank" rel="noopener">WhatsApp</a>
+  <a class="btn ghost" href="mailto:barbiertony@gmail.com?subject=15%20minutes%20avec%20Tony%20Barbier">E-mail</a>
+</div>
+
+<script>
+(function(){
+  var els=document.querySelectorAll('.reveal');
+  if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});return;}
+  var io=new IntersectionObserver(function(entries){entries.forEach(function(en){if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target);}})},{threshold:.12});
+  els.forEach(function(e){io.observe(e)});
+  setTimeout(function(){els.forEach(function(e){e.classList.add('in')})},1800);
+})();
+</script>
+</body>
+</html>

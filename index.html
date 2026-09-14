@@ -46,13 +46,17 @@ img{max-width:100%}
 .btn.sm{padding:9px 14px;font-size:14px}
 /* hero */
 .hero{background:radial-gradient(1200px 600px at 80% -10%,#2a4a7a 0%,var(--navy) 55%);color:#fff;padding:76px 0 64px;overflow:hidden}
-.hero .wrap{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,.75fr);gap:40px;align-items:center}
+.hero .wrap{display:block;max-width:900px}
 .kicker{display:inline-block;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);padding:6px 12px;border-radius:999px;font-size:13px;letter-spacing:.04em;text-transform:uppercase;color:#dbe6f5;margin-bottom:16px}
-.hero h1{font-family:Georgia,"Times New Roman",serif;font-weight:400;font-size:clamp(30px,4vw,44px);line-height:1.15;margin:0 0 20px;text-wrap:balance}
+.hero h1{font-family:Georgia,"Times New Roman",serif;font-weight:400;font-size:clamp(32px,4.6vw,52px);line-height:1.12;margin:0 0 20px;text-wrap:balance}
 .hero h1 em{font-style:normal;color:var(--accent);white-space:nowrap;display:inline-block;max-width:100%}
-.hero p.lead{font-size:19px;color:#e9eef7;margin:0 0 28px;max-width:540px;line-height:1.6}
+.hero p.lead{font-size:19px;color:#e9eef7;margin:0 0 28px;max-width:680px;line-height:1.6}
 .hero .btns{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:14px}
 .hero .micro{font-size:13px;color:#b9c8dd}
+.who{display:flex;align-items:center;gap:14px;margin-bottom:22px}
+.who img{width:72px;height:72px;border-radius:50%;object-fit:cover;object-position:50% 25%;border:3px solid rgba(255,255,255,.85);box-shadow:0 8px 24px rgba(0,0,0,.35)}
+.who b{display:block;font-size:17px;color:#fff}
+.who span{display:block;font-size:14px;color:#b9c8dd}
 .portrait{position:relative;justify-self:end;width:100%;max-width:380px}
 .portrait img{width:100%;border-radius:18px;box-shadow:0 30px 60px rgba(0,0,0,.4);display:block}
 .portrait .badge{position:absolute;left:-14px;bottom:22px;background:#fff;color:var(--ink);padding:10px 14px;border-radius:12px;box-shadow:0 10px 30px rgba(0,0,0,.25);font-size:14px;font-weight:700}
@@ -122,15 +126,11 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:10px 24px;justify-content:space-bet
 .genie ul{margin:0;padding-left:18px;color:#dbe6f5}.genie li{margin-bottom:4px}
 .logos .wrap{text-align:center}
 @media (min-width:861px) and (max-width:1024px){
-  .hero .wrap{grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:28px}
-  .portrait{max-width:300px}
 }
 @media (max-width:860px){
   .hero{padding:36px 0 40px;text-align:center}
-  .hero .wrap{grid-template-columns:minmax(0,1fr);gap:22px}
-  .portrait{justify-self:center;max-width:200px;order:-1;text-align:center}
-  .portrait img{width:200px;height:200px;object-fit:cover;object-position:50% 30%;border-radius:50%;border:4px solid rgba(255,255,255,.15);margin:0 auto}
-  .portrait .badge{position:static;display:inline-block;margin-top:12px;padding:8px 14px}
+  .who{flex-direction:column;text-align:center;gap:10px}
+  .who img{width:96px;height:96px}
   .hero h1{margin:0 auto 16px;font-size:clamp(30px,8vw,38px)}
   .hero p.lead{margin:0 auto 22px;font-size:17px}
   .hero .btns{justify-content:center}
@@ -206,6 +206,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:10px 24px;justify-content:space-bet
 <header class="hero" id="top">
   <div class="wrap">
     <div>
+      <div class="who"><img src="portrait-tony.jpg" alt="Tony Barbier" width="72" height="72"><div><b>Tony Barbier</b><span>Développement commercial · Bordeaux · 25 ans de terrain</span></div></div>
       <span class="kicker live"><i></i>Disponible immédiatement · Bordeaux ou à distance</span>
       <h1>Vous cherchez peut-être<br>un commercial&nbsp;?<br><em id="fit">Ce que j'apporte va bien au&#8209;delà.</em></h1>
       <p class="lead">J'interviens quand une entreprise a un bon produit et que son moteur commercial doit passer un cap : je fais le pont entre le produit, le marketing et la vente, puis j'exécute moi-même, jusqu'à la signature.</p>
@@ -214,10 +215,6 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:10px 24px;justify-content:space-bet
         <a class="btn ghost" href="#video">Voir la vidéo</a>
       </div>
       <div class="micro">Créneau en visio, confirmation immédiate · ou WhatsApp / e-mail en bas de page</div>
-    </div>
-    <div class="portrait">
-      <img src="portrait-tony.jpg" alt="Tony Barbier">
-      <div class="badge">Tony Barbier<span>Bordeaux · 25 ans de terrain</span></div>
     </div>
   </div>
 </header>

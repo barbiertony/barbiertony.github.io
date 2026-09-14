@@ -46,10 +46,10 @@ img{max-width:100%}
 .btn.sm{padding:9px 14px;font-size:14px}
 /* hero */
 .hero{background:radial-gradient(1200px 600px at 80% -10%,#2a4a7a 0%,var(--navy) 55%);color:#fff;padding:76px 0 64px;overflow:hidden}
-.hero .wrap{display:grid;grid-template-columns:1.25fr .75fr;gap:40px;align-items:center}
+.hero .wrap{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,.75fr);gap:40px;align-items:center}
 .kicker{display:inline-block;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);padding:6px 12px;border-radius:999px;font-size:13px;letter-spacing:.04em;text-transform:uppercase;color:#dbe6f5;margin-bottom:16px}
 .hero h1{font-family:Georgia,"Times New Roman",serif;font-weight:400;font-size:clamp(30px,4vw,44px);line-height:1.15;margin:0 0 20px;text-wrap:balance}
-.hero h1 em{font-style:normal;color:var(--accent)}
+.hero h1 em{font-style:normal;color:var(--accent);white-space:nowrap;display:inline-block;max-width:100%}
 .hero p.lead{font-size:19px;color:#e9eef7;margin:0 0 28px;max-width:540px;line-height:1.6}
 .hero .btns{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:14px}
 .hero .micro{font-size:13px;color:#b9c8dd}
@@ -122,12 +122,12 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:10px 24px;justify-content:space-bet
 .genie ul{margin:0;padding-left:18px;color:#dbe6f5}.genie li{margin-bottom:4px}
 .logos .wrap{text-align:center}
 @media (min-width:861px) and (max-width:1024px){
-  .hero .wrap{grid-template-columns:1.2fr .8fr;gap:28px}
+  .hero .wrap{grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:28px}
   .portrait{max-width:300px}
 }
 @media (max-width:860px){
   .hero{padding:36px 0 40px;text-align:center}
-  .hero .wrap{gap:22px}
+  .hero .wrap{grid-template-columns:minmax(0,1fr);gap:22px}
   .portrait{justify-self:center;max-width:200px;order:-1;text-align:center}
   .portrait img{width:200px;height:200px;object-fit:cover;object-position:50% 18%;border-radius:50%;border:4px solid rgba(255,255,255,.15);margin:0 auto}
   .portrait .badge{position:static;display:inline-block;margin-top:12px;padding:8px 14px}
@@ -207,13 +207,13 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:10px 24px;justify-content:space-bet
   <div class="wrap">
     <div>
       <span class="kicker live"><i></i>Disponible immédiatement · Bordeaux ou à distance</span>
-      <h1>Vous cherchez peut-être<br>un commercial.<br><em>Ce que j'apporte<br>va bien au&#8209;delà.</em></h1>
-      <p class="lead">Vingt-cinq ans de vente et de développement commercial pour comprendre vite votre business, trouver ce qui bloque, et <span class="rot" id="rot">le débloquer moi-même</span>.</p>
+      <h1>Vous cherchez peut-être<br>un commercial&nbsp;?<br><em id="fit">Ce que j'apporte va bien au&#8209;delà.</em></h1>
+      <p class="lead">Vingt-cinq ans de vente et de développement commercial pour comprendre vite votre business, trouver ce qui bloque, et le débloquer moi-même.</p>
       <div class="btns">
         <a class="btn primary" href="https://calendar.app.google/2pavnEKRFbRyRdBB8" target="_blank" rel="noopener">Réserver 15 minutes dans mon agenda</a>
         <a class="btn ghost" href="#video">Voir la vidéo</a>
       </div>
-      <div class="micro">Pas de pitch, pas d'engagement : en quinze minutes, vous saurez si ça vaut le coup de continuer. Visio, confirmation immédiate.</div>
+      <div class="micro">Créneau en visio, confirmation immédiate · ou WhatsApp / e-mail en bas de page</div>
     </div>
     <div class="portrait">
       <img src="portrait-sourire.jpg" alt="Tony Barbier">
@@ -328,7 +328,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:10px 24px;justify-content:space-bet
 <section class="cta" id="contact">
   <div class="wrap reveal">
     <h2>Quinze minutes suffisent</h2>
-    <p>Choisissez votre porte d'entrée : un créneau dans mon agenda, un message WhatsApp, ou un e-mail. Pas de pitch, pas d'engagement, réponse sous 24 h.</p>
+    <p>Choisissez votre porte d'entrée : un créneau dans mon agenda, un message WhatsApp, ou un e-mail. Réponse sous 24 h.</p>
     <div class="btns">
       <a class="btn primary" href="https://calendar.app.google/2pavnEKRFbRyRdBB8" target="_blank" rel="noopener">Réserver un créneau de 15 minutes</a>
       <a class="btn ghost" href="https://wa.me/33609701141?text=Bonjour%20Tony%2C%20je%20souhaite%20%C3%A9changer%2015%20minutes." target="_blank" rel="noopener">WhatsApp · 06 09 70 11 41</a>
@@ -349,7 +349,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:10px 24px;justify-content:space-bet
 <div class="slidein" id="slidein" aria-live="polite">
   <button class="x" id="slx" aria-label="Fermer">&times;</button>
   <b>Quinze minutes, cette semaine ?</b>
-  <p>Vous voyez si ça vaut le coup de continuer. Moi aussi. Créneau en visio, confirmation immédiate.</p>
+  <p>Un créneau en visio, quand ça vous arrange. Confirmation immédiate.</p>
   <a class="btn primary" href="https://calendar.app.google/2pavnEKRFbRyRdBB8" target="_blank" rel="noopener">Choisir un créneau</a>
 </div>
 
@@ -366,12 +366,16 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:10px 24px;justify-content:space-bet
   els.forEach(function(e){io.observe(e)});
   setTimeout(function(){els.forEach(function(e){e.classList.add('in')})},1800);
 })();
-/* mot tournant */
+/* ligne dorée : toujours sur une seule ligne */
 (function(){
-  var el=document.getElementById('rot'); if(!el) return;
-  var words=['le débloquer moi-même','structurer votre offre','convertir vos démos','faire produire votre réseau','développer vos comptes'];
-  var i=0; setInterval(function(){ i=(i+1)%words.length; el.style.opacity=0; setTimeout(function(){el.textContent=words[i]; el.style.opacity=1},250); },2800);
-  el.style.transition='opacity .25s';
+  var em=document.getElementById('fit'); if(!em) return;
+  var h1=em.parentNode;
+  function fit(){
+    em.style.fontSize='';
+    var size=parseFloat(getComputedStyle(em).fontSize), max=h1.clientWidth;
+    while(em.scrollWidth>max && size>16){ size-=1; em.style.fontSize=size+'px'; }
+  }
+  fit(); window.addEventListener('resize',fit); window.addEventListener('load',fit); if(document.fonts&&document.fonts.ready){document.fonts.ready.then(fit);}
 })();
 /* vidéo : façade puis iframe */
 (function(){
@@ -424,7 +428,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:10px 24px;justify-content:space-bet
   function finish(){
     step.innerHTML=''; bar.style.width='100%';
     var r=R[ans[0]]||R.conv; var fmt=ans[2];
-    var extra = fmt==='poste' ? 'Un poste : parlons-en cette semaine, je suis disponible tout de suite.' : fmt==='mission' ? 'Une mission : le format le plus simple pour commencer, sans engagement long.' : fmt==='curieux' ? 'Pas d\'urgence : gardez la page, et si un jour ça coince, quinze minutes suffisent.' : 'On en parle quinze minutes, et vous saurez si ça vaut le coup de continuer.';
+    var extra = fmt==='poste' ? 'Un poste : parlons-en cette semaine, je suis disponible tout de suite.' : fmt==='mission' ? 'Une mission : le format le plus simple pour commencer, sans engagement long.' : fmt==='curieux' ? 'Pas d\'urgence : gardez la page, et si un jour ça coince, quinze minutes suffisent.' : 'Si vous le souhaitez, on en parle quinze minutes.';
     var msg=encodeURIComponent('Bonjour Tony, j\'ai fait votre diagnostic express (frein : '+ans[0]+'). Je souhaite échanger 15 minutes.');
     res.innerHTML='<h4>'+r.t+'</h4><p>'+r.p+' '+extra+'</p><div class="btns"><a class="btn primary" href="'+AG+'" target="_blank" rel="noopener">Réserver 15 minutes</a><a class="btn ghost" href="https://wa.me/33609701141?text='+msg+'" target="_blank" rel="noopener">M\'écrire sur WhatsApp</a></div><button class="restart" id="drestart">Recommencer</button>';
     res.style.display='block';

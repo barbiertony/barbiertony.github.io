@@ -350,6 +350,9 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:10px 24px;justify-content:space-bet
 </div>
 
 <script>
+/* toujours arriver en haut de page */
+if('scrollRestoration' in history){history.scrollRestoration='manual';}
+if(!location.hash){window.scrollTo(0,0);window.addEventListener('pageshow',function(){window.scrollTo(0,0);});}
 (function(){
   var els=document.querySelectorAll('.reveal');
   if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});return;}
